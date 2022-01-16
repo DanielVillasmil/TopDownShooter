@@ -33,7 +33,7 @@ end
 function love.draw()
     love.graphics.draw(sprites.background, 0, 0)
 
-    love.graphics.draw(sprites.player, player.x, player.y, tempRotation, nil, nil, sprites.player:getWidth() / 2, sprites.player:getHeight() / 2)
+    love.graphics.draw(sprites.player, player.x, player.y, playerMouseAngle(), nil, nil, sprites.player:getWidth() / 2, sprites.player:getHeight() / 2)
 end
 
 function playerMouseAngle()
