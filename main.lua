@@ -4,6 +4,10 @@ function love.load()
     sprites.bullet = love.graphics.newImage('sprites/bullet.png')
     sprites.player = love.graphics.newImage('sprites/player.png')
     sprites.zombie = love.graphics.newImage('sprites/zombie.png')
+
+    player = {}
+    player.x = love.graphics.getWidth() / 2
+    player.y = love.graphics.getHeight() / 2
 end
 
 function love.update(dt)
