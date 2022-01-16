@@ -38,6 +38,11 @@ function love.update(dt)
             end
         end
     end
+
+    for i,b in ipairs(bullets) do
+        b.x = b.x + (math.cos( b.direction ) * b.speed * dt)
+        b.y = b.y + (math.sin( b.direction ) * b.speed * dt)
+    end
 end
 
 function love.draw()
