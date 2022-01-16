@@ -10,7 +10,6 @@ function love.load()
     player.y = love.graphics.getHeight() / 2
     player.speed = 180
 
-    tempRotation = 0
 end
 
 function love.update(dt)
@@ -27,7 +26,6 @@ function love.update(dt)
         player.y = player.y + player.speed*dt
     end
 
-    tempRotation = tempRotation + 0.01
 end
 
 function love.draw()
