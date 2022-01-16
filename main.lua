@@ -37,7 +37,7 @@ function love.draw()
     love.graphics.draw(sprites.player, player.x, player.y, playerMouseAngle(), nil, nil, sprites.player:getWidth() / 2, sprites.player:getHeight() / 2)
 
     for i,z in ipairs(zombies) do
-        love.graphics.draw(sprites.zombie, z.x, z.y)
+        love.graphics.draw(sprites.zombie, z.x, z.y, zombiePlayerAngle(z))
     end
 end
 
@@ -50,6 +50,10 @@ end
 
 function playerMouseAngle()
     return math.atan2( player.y - love.mouse.getY(), player.x - love.mouse.getX() ) + math.pi
+end
+
+function zombiePlayerAngle(enemy)
+    return math.atan2( player.y - enemy.y, player.x - enemy.x )
 end
 
 function spawnZombie()
