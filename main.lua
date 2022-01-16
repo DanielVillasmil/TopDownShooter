@@ -46,4 +46,5 @@ function spawnZombie()
     zombie.x = 300
     zombie.y = 500
     zombie.speed = 100
+    table.insert(zombies, zombie)
 end
