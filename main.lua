@@ -10,6 +10,9 @@ function love.load()
     player.y = love.graphics.getHeight() / 2
     player.speed = 180
 
+    zombies = {}
+
+
 end
 
 function love.update(dt)
@@ -36,4 +39,11 @@ end
 
 function playerMouseAngle()
     return math.atan2( player.y - love.mouse.getY(), player.x - love.mouse.getX() ) + math.pi
+end
+
+function spawnZombie()
+    local zombie = {}
+    zombie.x = 300
+    zombie.y = 500
+    zombie.speed = 100
 end
