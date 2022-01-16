@@ -60,6 +60,11 @@ function love.keypressed( key )
     end
 end
 
+function love.mousepressed( x, y, button )
+    if button == 1 then
+        spawnBullet()
+    end
+end
 
 function playerMouseAngle()
     return math.atan2( player.y - love.mouse.getY(), player.x - love.mouse.getX() ) + math.pi
