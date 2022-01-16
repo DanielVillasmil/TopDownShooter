@@ -18,10 +18,10 @@ function love.update(dt)
         player.x = player.x - 1
     end
     if love.keyboard.isDown("w") then
-        player.x = player.y - 1
+        player.y = player.y - 1
     end
     if love.keyboard.isDown("s") then
-        player.x = player.y + 1
+        player.y = player.y + 1
     end
 end
 
