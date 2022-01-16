@@ -11,8 +11,7 @@ function love.load()
     player.speed = 180
 
     zombies = {}
-
-
+    bullets = {}
 end
 
 function love.update(dt)
@@ -73,6 +72,11 @@ function spawnZombie()
     zombie.y = math.random(0, love.graphics.getHeight())
     zombie.speed = 100
     table.insert(zombies, zombie)
+end
+
+function spawnBullet()
+    local bullet = {}
+    
 end
 
 function distanceBetween(x1, y1, x2, y2)
