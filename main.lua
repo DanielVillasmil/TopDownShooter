@@ -79,7 +79,8 @@ function spawnBullet()
     bullet.x = player.x
     bullet.y = player.y
     bullet.speed = 500
-    bullet.direction = playerMouseAngle()    
+    bullet.direction = playerMouseAngle()
+    table.insert(bullets, bullet)
 end
 
 function distanceBetween(x1, y1, x2, y2)
