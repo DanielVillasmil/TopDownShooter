@@ -54,8 +54,8 @@ end
 
 function spawnZombie()
     local zombie = {}
-    zombie.x = 300
-    zombie.y = 500
+    zombie.x = math.random(0, love.graphics.getWidth())
+    zombie.y = math.random(0, love.graphics.getHeight())
     zombie.speed = 100
     table.insert(zombies, zombie)
 end
