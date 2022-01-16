@@ -38,7 +38,6 @@ function love.update(dt)
             end
         end
     end
-
 end
 
 function love.draw()
@@ -48,6 +47,10 @@ function love.draw()
 
     for i,z in ipairs(zombies) do
         love.graphics.draw(sprites.zombie, z.x, z.y, zombiePlayerAngle(z), nil, nil, sprites.zombie:getWidth() /2, sprites.zombie:getHeight() / 2)
+    end
+
+    for i,b in ipairs(bullets) do
+        love.graphics.draw(sprites.bullet, b.x, b.y)
     end
 end
 
