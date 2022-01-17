@@ -122,7 +122,7 @@ function love.draw()
     love.graphics.printf("Score: " .. score, 0, love.graphics.getHeight()-100, love.graphics.getWidth(), "center")
 
     if player.injured then
-        love.graphics.setColor(255, 0, 0)
+        love.graphics.setColor(255, 51, 51)
     end
 
     love.graphics.draw(sprites.player, player.x, player.y, playerMouseAngle(), nil, nil, sprites.player:getWidth() / 2, sprites.player:getHeight() / 2)
