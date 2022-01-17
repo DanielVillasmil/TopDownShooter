@@ -122,12 +122,12 @@ function love.draw()
     love.graphics.printf("Score: " .. score, 0, love.graphics.getHeight()-100, love.graphics.getWidth(), "center")
 
     if player.injured then
-        love.graphics.setColor(1, 0, 0)
+        love.graphics.setColor(255, 0, 0)
     end
 
     love.graphics.draw(sprites.player, player.x, player.y, playerMouseAngle(), nil, nil, sprites.player:getWidth() / 2, sprites.player:getHeight() / 2)
 
-    love.graphics.setColor(1, 1, 1)
+    love.graphics.setColor(255, 255, 255)
     for i,z in ipairs(zombies) do
         love.graphics.draw(sprites.zombie, z.x, z.y, zombiePlayerAngle(z), nil, nil, sprites.zombie:getWidth() /2, sprites.zombie:getHeight() / 2)
     end
