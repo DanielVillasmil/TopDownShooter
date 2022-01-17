@@ -39,6 +39,7 @@ function love.update(dt)
         if distanceBetween(z.x, z.y, player.x, player.y) < 30 then
             for i,z in ipairs(zombies) do
                 zombies[i] = nil
+                gameState = 1
             end
         end
     end
