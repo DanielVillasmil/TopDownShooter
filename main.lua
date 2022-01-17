@@ -82,6 +82,7 @@ function love.update(dt)
         timer = timer - dt
         if timer <= 0 then
             spawnZombie()
+            maxTime = 0.95 * maxTime
             timer = maxTime
         end
     end
